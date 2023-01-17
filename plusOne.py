@@ -1,22 +1,16 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        n=len(digits)-1;
-        i=1;
-        while i == 1:
-            num = digits[n]+1
-            if num==10:
-                if n==0:
-                    digits.insert(0,1);
-                    digits[1]=0;
-                    i=0
-                else:
-                    digits[n]=0;
+        c=1;
+        i=len(digits)-1;
+        while c==1 and i>=0:
+            if digits[i]+c>9:
+                digits[i]=9-digits[i];
+                c=1;
             else:
-                if n==0:
-                    digits[0]=num;
-                    i=0
-                else:
-                    digits[n]=num;
-                    i=0;
-            n=n-1;
-        return digits
+                digits[i]+=c;
+                c=0;
+            i-=1;
+        if c!=0:
+            digits.insert(0,c);
+        return digits;
+            
