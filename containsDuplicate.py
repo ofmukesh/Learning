@@ -9,3 +9,6 @@ class Solution:
             else:
                 temp[num]=1
         return False
+
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(nums)!=len(set(nums))
