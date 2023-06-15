@@ -1,0 +1,23 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        ans=""
+        temp=None
+        for c in s:
+            print(c)
+            if c==" ":
+                if temp:
+                    ans=" "+temp+ans
+                temp=None
+            else:
+                if temp:
+                    temp+=c
+                else:
+                    temp=""+c
+        if temp:
+            ans=temp+ans
+
+        if ans[0]==" ":
+            ans=ans[1:]
+        # elif ans[-1]==" ":
+        #     ans=ans[:len(ans)-1]
+        return ans
