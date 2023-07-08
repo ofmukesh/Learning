@@ -2,7 +2,7 @@ class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
         for row in range(len(board)):
             for col in range(len(board[row])):
-                # count of neighbors of current cell
+                # count of live neighbors of current cell
                 total_neighbors = 0
 
                 # current cell
