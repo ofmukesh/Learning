@@ -18,10 +18,13 @@
 # ---------------------code----------------------
 class Solution:
     def climbStairs(self, n: int) -> int:
-        last=1
-        last_one=1
-
-        for i in range(n-1):
-            last_one+=last
         
+        last=1 
+        last_one=1 
+        # this loop run from i=0 to n-2 bcz we know last 2 step ways is always 1,1
+        for i in range(n-1):
+            t=last+last_one
+            last=last_one
+            last_one=t
+
         return last_one
