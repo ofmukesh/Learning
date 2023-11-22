@@ -17,3 +17,10 @@ class Solution:
                 q.append((row, col + 1))
         # return the result array 
         return res
+        
+'''
+Time complexity -> O(N)
+Space Complexity -> O(N)
+
+[Note:- N is the number of elements stored in the deque, which is equals to len(result array)]
+'''
